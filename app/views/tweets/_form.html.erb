@@ -1,0 +1,21 @@
+<%= form_with(model: @tweet, local: true, url: choose_new_or_edit) do |form| %>
+<% if @tweet.errors.any? %>
+  <div id="error_explanation">
+    <p><%= @tweet.errors.count %>件のエラーがあります</p>
+  
+    <ul>
+      <% @tweet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <div class="tweet_content">
+    <div class="input-group">
+    	<span class="input-group-addon"><%= form.label :Tweet %></span>
+    	<%= form.text_field :content,:class => 'form-control',:placeholder => "いまどうしてる？" %>
+   </div>
+  </div>
+    <%= form.submit %>
+  <% end %> 

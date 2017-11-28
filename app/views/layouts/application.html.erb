@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task</title>
+    <%= csrf_meta_tags %>
+　　<meta name="viewport" content="width=device-width"> 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+     <div class="container-fluid">
+      <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+        <span class="sr-only">Twitter</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+       </button>
+      <!--   <a class="navbar-brand" href="#">Twitter</a> -->
+       </div>
+      <div id="gnavi" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a class="glyphicon glyphicon-home" href="https://phase2-final-task-aaachanzu09-1.c9users.io/tweets">ホーム</a></li></span>
+        <li><a class="glyphicon glyphicon-flash" href="">モーメント</a></li>
+        <li><a class="glyphicon glyphicon-bell" href="">通知</a></li>
+        <li><a class="glyphicon glyphicon-envelope" href="">メッセージ</a></li>
+      </ul>
+      <div class="navbar-right">
+        <a class="navbar-brand" href="#">
+			<!--	　<img alt="Image" src="../../profile_image.JPG" style="height: 20px;"/> -->
+			　</a>
+      　<form class="navbar-form navbar-left" role="search">
+				　<div class="form-group">
+					　<input type="text" class="form-control" placeholder="キーワード検索">
+				　  <button type="submit" class="btn btn-default"> 検索</button>
+				　</div>
+			　</form>
+			　<button type="button" class="btn btn-default navbar-btn"><a href="https://phase2-final-task-aaachanzu09-1.c9users.io/tweets/new">ツイート</a></button>
+			</div>
+    </div>
+  </div>
+</nav>
+<!--
+    <div class="container">
+
+      <header>
+        <ul  class="row">
+          <img src="../../130955-the-ultimate/png/home-1.png" class="home_image">
+          <li class="col-md-1">ホーム</li>
+          <li class="col-md-1">モーメント</li>
+          <li class="col-md-1">通知</li>
+          <li class="col-md-1">メッセージ</li>
+
+          <li class="col-md-offset-6 col-md-1">キーワード検索</li>
+          <button type="button" class="btn btn-info">ツイート</button>
+        </ul>
+      </header>
+    </div>
+-->
+<!--このdivはasidemとarticleを囲む-->
+    <div class="row">
+      <aside class="col-md-3">
+        <div class="position"><!--青と白両方含んだ四角全体を囲むdiv--> 
+          <p class="profile"></p>
+          <a class="navbar-brand profile_image" href="#">
+          <div class="parant">
+            <p class="profile1"><a href="">Marie</a></p>
+            <ul class="table">
+             <li class="table_cell"><a href="">ツイート</br> 10</a></li>
+             <li class="table_cell"><a href="">フォロー</br> 53</a></li>
+             <li class="table_cell"><a href="">フォロワー</br> 48</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <article class="col-md-6 container">
+      <%= yield %>
+      </article>
+    </div>
+  </body>
+</html> 
+ 

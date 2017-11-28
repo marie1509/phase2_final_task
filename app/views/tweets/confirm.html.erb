@@ -1,0 +1,19 @@
+
+<h3>Confirmation</h3>
+
+<%= form_with(model: @tweet,  local: true) do |form| %>
+ <div class="input-group">
+    	<span class="input-group-addon"><%= form.label :Tweet %></span>
+    	<%= form.text_field :content,:class => 'form-control',:placeholder => "いまどうしてる？",:readonly => true %>
+ </div>
+      <%= form.submit  "Register" %>
+<% end %>
+
+<!--form_withで戻るボタンを作成して、パラメーターとして値をnewメソッドに送る-->
+<div>
+  <%= form_with(model: @tweet, url: new_tweet_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :content %>
+    <%= form.submit "Back", name: 'back' %>
+  <% end %>
+</div>
+

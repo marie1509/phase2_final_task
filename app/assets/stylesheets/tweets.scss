@@ -1,0 +1,115 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background-color: #e6ecf0;
+    margin : 0;
+    position: relative;
+}
+
+div.container-fluid {
+    
+}
+
+li {
+   list-style :none;
+}
+
+.home_image {
+    width:30px;
+}
+
+
+
+aside {
+    margin :auto 0;
+}
+
+article {
+    background-color:  #fff;
+    margin-top: 10px;
+}
+
+
+td {
+    min-height:80px;
+}
+
+.table_text {
+    font-size: 18px;
+}
+
+p.profile {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color:#1DA1F2;
+    width:90%;
+    height:100px;
+    margin-bottom:0;
+}
+
+p.profile1 {
+    background-color:  #fff;
+    width:90%;
+    height:120px;
+    margin: 0 20px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+p.profile1 a {
+    color: black;
+}
+
+
+
+div.position {
+    position : relative;
+   
+}
+
+a.navbar-brand {
+    margin-top: 5px;
+}
+
+.navbar-brand {
+  background: url("profile_image.jpg" ) no-repeat left center;
+  background-size: contain;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  
+}
+
+.profile_image {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position : absolute;
+    top: 60px;
+    left: 30px;
+}
+
+.parent {
+    position:relative;
+}
+
+ul.table {
+    display : table;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.table_cell {
+    display: table-cell;
+    text-align: center;
+}
+
+div.tweet_content {
+    height: 60px;
+    padding-top: 10px;
+}

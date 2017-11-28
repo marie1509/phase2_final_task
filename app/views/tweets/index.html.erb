@@ -1,0 +1,11 @@
+
+<table class="table table-hover table-responsive">
+    <% @tweets.each do | tweet | %>
+      <tr>
+        <td><a class="navbar-brand" href="#"></td>
+        <td class="table_text"><%= tweet.content %></td>
+        <td><%= link_to '編集', edit_tweet_path(tweet.id), class: "btn btn-mini btn-info" %></td>
+        <td><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class: "btn btn-mini btn-danger" %></td>
+      </tr>
+    <% end %>
+</table>
